@@ -138,7 +138,7 @@ a {
 
 /* you should always specify all */
 /* unless you want to specify styles for printing - use 'print' */
-@media all and (min-width: 768px) {
+@media all and (orientation: landscape) {
     .main-content {
 	flex-direction: row;
 	overflow: hidden;

@@ -33,11 +33,22 @@ function addThumbClickHandler(thumb) {
     });
 }
 
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function setRandomThumbnailToTacoCatURL(arr) {
+    var i = getRandomInt(0, arr.length - 1);
+    console.log("i = " + i);
+    arr[i].setAttribute('data-image-url', "http://www.catsvscancer.org/wp-content/uploads/2015/04/Taco-Cat-Spelled-Backwards-Is-Taco-Cat.1.jpg");
+}
+
 function getThumbnailsArray() {
     'use strict';
     var thumbnails = document.querySelectorAll(THUMBNAIL_LINK_SELECTOR);
     // backwards-compatible node-list to array conversion
     var thumbnailArray = [].slice.call(thumbnails);
+    setRandomThumbnailToTacoCatURL(thumbnailArray);
     return thumbnailArray;
 }
 
@@ -46,6 +57,8 @@ function initializeEvents() {
     var thumbnails = getThumbnailsArray();
     thumbnails.forEach(addThumbClickHandler);
 }
+
+
 
 function main() {
     initializeEvents();

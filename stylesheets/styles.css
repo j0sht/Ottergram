@@ -70,6 +70,11 @@ a {
     /* if the browser does not support rgba, it will simply be ignored */
     border: 1px solid rgb(100%, 100%, 100%);
     border: 1px solid rgba(100%, 100%, 100%, 0.8);
+    transition: transform 133ms ease-in-out;
+}
+
+.thumbnail-item:hover {
+    transform: scale(1.2);
 }
 
 .thumbnail-list {
@@ -78,7 +83,7 @@ a {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    padding: 0;
+    padding: 20px 0;
 
     /* white-space: nowrap prevents .thumbnail-item elements from wrapping */
     white-space: nowrap;
@@ -113,6 +118,13 @@ a {
 .detail-image-frame {
     position: relative;
     text-align: center;
+
+    transition: transform 333ms;
+}
+
+.is-tiny {
+    transform: scale(0.001);
+    transition: transform 0ms;
 }
 
 .detail-image {
@@ -160,6 +172,8 @@ a {
 	flex-direction: column;
 	order: 0;
 	margin-left: 20px;
+
+	padding: 0 35px;
     }
 
     .thumbnail-item {

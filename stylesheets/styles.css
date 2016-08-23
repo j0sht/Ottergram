@@ -133,6 +133,21 @@ a {
     font-size: 40px;
 }
 
+/* When the following elements are nested in .hidden-detail,
+   these new styles will be activated */
+.hidden-detail .detail-image-container {
+    display: none;
+}
+
+.hidden-detail .thumbnail-list {
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden-detail .thumbnail-item {
+    max-width: 80%;
+}
+
 /* you should always specify all */
 /* unless you want to specify styles for printing - use 'print' */
 @media all and (min-width: 768px) {
